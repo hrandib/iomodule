@@ -13,7 +13,7 @@ If(!(Test-Path $exportDir)) {
 
 Function CopyAltium {
     Write-Host "$($args[0].Name) -> $($name + '.' + $args[1])"
-    Copy-Item "$gerberPath/$($args[0].Name)" -Destination "$dir/Altium Export/$($name + '.' + $args[1])" -Force
+    Copy-Item "$gerberPath/$($args[0].Name)" -Destination "$exportDir/$($name + '.' + $args[1])" -Force
 }
 
 ForEach($file in $files) {
